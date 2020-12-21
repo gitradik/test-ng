@@ -1,0 +1,11 @@
+<div class="alarm">
+  <app-table
+    [actionsTemplate]="tableActionsTemplate"
+    [data]="alarmData | async"
+    [displayedColumns]="displayedColumns"
+  ></app-table>
+</div>
+
+<ng-template #tableActionsTemplate>
+  <app-form-fields [formFields]="formFields" [formGroup]="formGroup" [row]="true"></app-form-fields>
+</ng-template>

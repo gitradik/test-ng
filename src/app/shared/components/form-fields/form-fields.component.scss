@@ -1,0 +1,65 @@
+@import 'variables';
+
+app-form-fields {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .form-field {
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    position: relative;
+
+    .label {
+      padding: 9px 0;
+      font-size: 12px;
+      color: $color-tuna;
+      height: 100%;
+      width: 100%;
+      max-width: 130px;
+      min-width: 90px;
+      margin-right: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin: 0;
+      padding: 8px 21px;
+      font-size: 12px;
+      color: $color-tuna;
+      transition: 0.2s;
+      border: 1px solid $color-gray;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        transition: 0.2s;
+        border-color: rgba($color-red, 0.5);
+      }
+
+      &.ng-invalid.ng-touched {
+        transition: 0.2s;
+        border-color: rgba($color-red, 0.5);
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .m-r-1 {
+    margin-right: 1em;
+  }
+}

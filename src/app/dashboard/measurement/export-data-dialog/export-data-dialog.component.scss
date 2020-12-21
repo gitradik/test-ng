@@ -1,0 +1,37 @@
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .close {
+    margin-left: 0;
+  }
+}
+
+.modal-body {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+::ng-deep {
+  .modal-dialog {
+    max-width: 602px;
+  }
+}
+
+:host ::ng-deep {
+  app-form-fields {
+    .form-field {
+      padding-bottom: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .checkboxes {
+      flex-direction: column;
+
+      .checkbox-container {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+}

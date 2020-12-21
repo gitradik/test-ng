@@ -1,0 +1,20 @@
+<div class="my-color-picker">
+  <div
+    class="color-picker-input"
+    [class.error]="colorPickerOpen || (control && control.touched && !control.valid)"
+  >
+    <div class="selected-color" [style.color]="color">
+      <div class="dot" [style.backgroundColor]="color"></div>
+      {{ color }}
+    </div>
+    <button [class.open]="colorPickerOpen" (click)="toggle($event)"></button>
+  </div>
+  <input
+    #colorPicker
+    class="ngx-color-picker"
+    [cpToggle]="colorPickerOpen"
+    (colorPickerClose)="close()"
+    [cpPosition]="'top'"
+    [(colorPicker)]="color"
+  />
+</div>

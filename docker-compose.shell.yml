@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        NODE_VERSION: 12
+        NG_VERSION: 9
+    hostname: gudel-cmm
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ~/.npmrc:/root/.npmrc
+      - ~/.npmrc:/home/node/.npmrc
+      - "${SSH_AUTH_SOCK}:${SSH_AUTH_SOCK}"
+    ports:
+      - 4200:4200
+    environment:
+      SSH_AUTH_SOCK: "${SSH_AUTH_SOCK}"

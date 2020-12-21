@@ -1,0 +1,9 @@
+<div class="checkboxes">
+  <ng-container *ngFor="let option of field?.options">
+    <label class="checkbox-container" ngbButtonLabel
+      >{{ option }}
+      <input type="checkbox" [checked]="selectedOption(option)" (change)="change(option)" />
+      <span class="checkmark"></span>
+    </label>
+  </ng-container>
+</div>

@@ -1,0 +1,54 @@
+<ng-container *ngIf="formGroup">
+  <form [formGroup]="formGroup" [style.flexDirection]="row ? 'row' : 'column'">
+    <ng-container *ngFor="let field of formFields">
+      <div
+        [className]="['form-field', field?.cssClass].join(' ')"
+        [ngClass]="{ 'm-r-1': row, 'flex-column': field?.labelTop }"
+        [ngSwitch]="field.type"
+        [style.maxWidth]="field?.maxWidth"
+        [style.minWidth]="field?.minWidth"
+      >
+        <div *ngIf="field.label" class="label" [ngClass]="{ 'pt-0': field?.labelTop }">
+          {{ field.label }}
+        </div>
+
+        <ng-container *ngSwitchCase="fieldType.TEXT">
+          <input
+            [type]="field.dataType ? field.dataType : dataType.TEXT"
+            [formControlName]="field.name"
+          />
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.TEXTAREA">
+          <textarea [formControlName]="field.name"></textarea>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.COLOR">
+          <app-color-picker class="w-100" [field]="field"></app-color-picker>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.DROPDOWN">
+          <app-dropdown class="w-100" [field]="field"></app-dropdown>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.DATE">
+          <app-date-picker></app-date-picker>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.RANGE_DATE">
+          <app-range-date-picker></app-range-date-picker>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.RANGE_DATE_TIME">
+          <app-range-date-time-picker [field]="field"></app-range-date-time-picker>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="fieldType.CHECKBOXES">
+          <app-checkboxes [field]="field"></app-checkboxes>
+        </ng-container>
+
+        <app-form-field-error [field]="field"></app-form-field-error>
+      </div>
+    </ng-container>
+  </form>
+</ng-container>

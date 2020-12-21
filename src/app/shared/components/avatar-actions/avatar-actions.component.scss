@@ -1,0 +1,37 @@
+@import 'variables';
+
+.avatar-actions {
+  display: inline-block;
+  position: relative;
+
+  .actions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color-black, 0.6);
+    transition: 0.2s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin-right: 20px;
+      background: none;
+      border: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &:hover {
+    .actions {
+      transition: 0.2s;
+      opacity: 1;
+    }
+  }
+}

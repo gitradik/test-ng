@@ -1,0 +1,10 @@
+app-form-fields {
+  width: 100%;
+
+  ::ng-deep {
+    form {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+}

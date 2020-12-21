@@ -1,0 +1,14 @@
+<div class="log">
+  <app-table
+    [actionsTemplate]="tableActionsTemplate"
+    [data]="logData | async"
+    [displayedColumns]="displayedColumns"
+    (create)="openCreateDialog()"
+    (edit)="openEditDialog($event)"
+    (delete)="delete()"
+  ></app-table>
+</div>
+
+<ng-template #tableActionsTemplate>
+  <app-form-fields [formFields]="formFields" [formGroup]="formGroup" [row]="true"></app-form-fields>
+</ng-template>

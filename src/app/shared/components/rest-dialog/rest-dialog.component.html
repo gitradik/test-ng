@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{ data?.title }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="close()">
+    <img src="../assets/images/cross.svg" alt="close" />
+  </button>
+</div>
+<div class="modal-body mb-0 pb-0">
+  <app-form-fields [formFields]="formFields" [formGroup]="formGroup"></app-form-fields>
+</div>
+<div class="modal-footer" *ngIf="formGroup">
+  <button
+    class="form-submit-btn m-0"
+    [disabled]="!formGroup.valid"
+    [class.disabled]="!formGroup.valid"
+    (click)="submit()"
+  >
+    {{ data?.submitBtnText }}
+  </button>
+</div>

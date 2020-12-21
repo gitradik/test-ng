@@ -1,0 +1,33 @@
+@import 'variables';
+
+.alert {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  padding: 10px 30px 10px 10px;
+  box-shadow: $bs-default;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+
+  h4 {
+    margin: 0 0 0 10px;
+    font-size: 12px;
+    display: inline-block;
+    color: $color-white;
+    line-height: inherit;
+  }
+
+  .close {
+    top: -5px;
+    right: -1px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.2s;
+    color: $color-white;
+  }
+}

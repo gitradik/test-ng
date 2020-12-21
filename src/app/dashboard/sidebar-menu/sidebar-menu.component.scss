@@ -1,0 +1,15 @@
+@import 'variables';
+
+.sidebar-menu {
+  position: absolute;
+  z-index: 998;
+  top: 50px;
+  left: 0;
+  height: 100%;
+  max-height: calc(100% - 50px);
+  width: 187px;
+  padding: 24px 0 0 20px;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+}

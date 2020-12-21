@@ -1,0 +1,8 @@
+<div
+  class="form-field-error"
+  *ngIf="field && field.formControl.touched && !field.formControl.valid"
+>
+  <div class="error-msg">
+    {{ field.errorMessage }}
+  </div>
+</div>

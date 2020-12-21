@@ -1,0 +1,5 @@
+<div *ngIf="partItemState" class="part-item-state">
+  <div class="item-state error" [class.active]="activeState(partItemStateType.ERROR)"></div>
+  <div class="item-state warning" [class.active]="activeState(partItemStateType.WARNING)"></div>
+  <div class="item-state success" [class.active]="activeState(partItemStateType.SUCCESS)"></div>
+</div>

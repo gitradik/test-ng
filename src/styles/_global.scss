@@ -1,0 +1,32 @@
+@import 'variables';
+
+button,
+.btn {
+  outline: none !important;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.form-submit-btn {
+  margin-top: 10px;
+  padding: 9px 5px;
+  font-size: 12px;
+  text-align: center;
+  color: $color-white;
+  min-width: 123px;
+  max-width: 100%;
+  border: 0;
+  transition: 0.2s;
+  background-color: $color-red;
+
+  &:disabled {
+    transition: 0.2s;
+    background-color: $color-gray;
+  }
+
+  &.cancel {
+    background-color: $color-hard-gray;
+  }
+}

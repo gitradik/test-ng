@@ -1,0 +1,25 @@
+<div class="login">
+  <img src="../../../assets/logo.svg" alt="logo" />
+  <h2>Condition Monitoring Manager</h2>
+
+  <div class="fields">
+    <app-form-fields [formFields]="formFields" [formGroup]="formGroup"> </app-form-fields>
+
+    <button
+      class="form-submit-btn w-100 mt-2"
+      [disabled]="!formGroup.valid"
+      [class.disabled]="!formGroup.valid"
+      (click)="submit()"
+    >
+      Login
+    </button>
+
+    <div class="fields-dividers">
+      <div class="dropdown-divider w-100"></div>
+      <span>or</span>
+      <div class="dropdown-divider w-100"></div>
+    </div>
+
+    <button class="form-submit-btn mt-0 w-100 gudel-hub-btn">Login via Güdel Hub</button>
+  </div>
+</div>

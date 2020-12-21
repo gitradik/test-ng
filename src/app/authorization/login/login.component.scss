@@ -1,0 +1,44 @@
+@import 'variables';
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 36px;
+    font-size: 20px;
+    color: $color-tuna;
+  }
+
+  img {
+    height: auto;
+    max-width: 163px;
+  }
+
+  .fields {
+    padding: 25px;
+    width: 100%;
+    max-width: 343px;
+    background-color: $color-white;
+    box-shadow: $bs-default;
+
+    .fields-dividers {
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+
+      span {
+        color: $color-tuna;
+        font-size: 12px;
+        padding: 0 19px;
+      }
+    }
+
+    .gudel-hub-btn {
+      background-color: $color-tuna;
+    }
+  }
+}

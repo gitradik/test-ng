@@ -1,0 +1,50 @@
+<div class="table-actions">
+  <ng-container *ngTemplateOutlet="actionsTemplate"> </ng-container>
+
+  <div class="table-action ml-auto" *ngIf="create.observers.length">
+    <button class="btn-action-icon" (click)="create.emit()" type="button">
+      <img src="../assets/images/circle-plus.svg" alt="create" />
+    </button>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let column of displayedColumns">{{ column.label }}</th>
+      <th scope="col" *ngIf="edit.observers.length || delete.observers.length"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of data">
+      <td *ngFor="let item of items | tableRow">{{ item.value }}</td>
+      <td scope="col" *ngIf="edit.observers.length || delete.observers.length">
+        <div class="d-flex justify-content-end">
+          <button
+            *ngIf="delete.observers.length"
+            class="btn-action btn-action-icon"
+            (click)="delete.emit(items)"
+            type="button"
+          >
+            <img src="../assets/images/trash.svg" alt="delete" />
+          </button>
+          <button
+            *ngIf="edit.observers.length"
+            class="btn-action btn-action-icon"
+            (click)="edit.emit(items)"
+            type="button"
+          >
+            <img src="../assets/images/pencil.svg" alt="edit" />
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot valign="center">
+    <tr>
+      <td [colSpan]="displayedColumns?.length">
+        <app-table-paginator></app-table-paginator>
+      </td>
+    </tr>
+  </tfoot>
+</table>

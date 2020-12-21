@@ -1,0 +1,39 @@
+@import 'variables';
+
+.modal-content {
+  border-radius: 0;
+  border: 0;
+  box-shadow: $bs-dialog;
+}
+
+.modal-header {
+  padding: 15px 30px;
+  position: relative;
+  padding-right: 70px;
+
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.modal-title {
+  font-size: 18px;
+  color: $color-tuna;
+  line-height: initial;
+}
+
+.modal-body {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}

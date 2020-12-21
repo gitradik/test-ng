@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Export data</h4>
+  <app-form-fields
+    [formFields]="[data?.rangeDateTimeFormField]"
+    [formGroup]="data?.formGroup"
+    [row]="true"
+  ></app-form-fields>
+  <button type="button" class="close" aria-label="Close" (click)="close()">
+    <img src="../assets/images/cross.svg" alt="close" />
+  </button>
+</div>
+<div class="modal-body">
+  <app-form-fields [formFields]="[valueFormField]" [formGroup]="data?.formGroup"> </app-form-fields>
+</div>
+<div class="modal-footer pt-4 pb-4" *ngIf="data?.formGroup">
+  <button class="form-submit-btn m-0" (click)="submit()">
+    Download
+  </button>
+</div>

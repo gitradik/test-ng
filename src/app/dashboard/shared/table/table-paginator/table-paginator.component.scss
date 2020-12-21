@@ -1,0 +1,21 @@
+.table-paginator {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+ngb-pagination {
+  ::ng-deep {
+    .pagination {
+      margin-bottom: 0;
+    }
+
+    .page-link {
+      outline: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

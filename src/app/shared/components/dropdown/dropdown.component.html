@@ -1,0 +1,15 @@
+<div class="btn-group shared-dropdown w-100">
+  <button type="button" class="btn btn-displayed-selection">
+    {{ control?.value || field?.placeholder || 'Select' }}
+  </button>
+  <div class="btn-group btn-dropdown" ngbDropdown>
+    <button class="btn btn-toggle" ngbDropdownToggle></button>
+    <div ngbDropdownMenu>
+      <ng-container>
+        <button ngbDropdownItem *ngFor="let option of field?.options" (click)="selection(option)">
+          {{ option }}
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</div>

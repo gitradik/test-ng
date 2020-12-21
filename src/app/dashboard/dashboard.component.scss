@@ -1,0 +1,15 @@
+@import 'variables';
+
+.dashboard {
+  position: relative;
+  padding-top: 50px;
+  padding-left: 187px;
+  background-color: $color-white-smoke;
+
+  .dashboard-container {
+    padding: 35px;
+    padding-bottom: 0;
+    max-height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}

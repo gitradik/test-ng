@@ -1,0 +1,14 @@
+@import 'variables';
+
+.options {
+  background-color: $color-white;
+  padding: 30px 41px;
+  display: flex;
+  align-items: flex-start;
+
+  .options-form {
+    margin-left: 70px;
+    width: 100%;
+    max-width: 600px;
+  }
+}

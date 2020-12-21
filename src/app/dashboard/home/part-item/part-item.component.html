@@ -1,0 +1,10 @@
+<div class="part-item" *ngIf="partItem">
+  <app-part-item-state [partItemState]="partItem.state"></app-part-item-state>
+  <div class="item-top">
+    <img [src]="'../assets/images/' + partItem.img" alt="tmp-img-part" />
+    <label>{{ partItem.partName }}</label>
+  </div>
+  <div class="item-bottom">
+    <label>{{ partItem.name }}</label>
+  </div>
+</div>

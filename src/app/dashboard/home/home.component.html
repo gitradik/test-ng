@@ -1,0 +1,7 @@
+<div class="home">
+  <ng-container *ngFor="let part of parts | async; let i = index; last as isLast">
+    <div class="d-inline-block" [style.marginRight]="isLast ? 0 : '66px'">
+      <app-part-item [partItem]="part"></app-part-item>
+    </div>
+  </ng-container>
+</div>

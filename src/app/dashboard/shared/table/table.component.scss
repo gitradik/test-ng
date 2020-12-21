@@ -1,0 +1,29 @@
+.table-actions {
+  display: flex;
+
+  .table-action {
+    margin-right: 14px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.btn-action {
+  padding: 0;
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & + & {
+    margin-left: 16px;
+  }
+}
+
+.btn-action-icon {
+  background: none;
+  border: none;
+}

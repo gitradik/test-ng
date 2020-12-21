@@ -1,0 +1,22 @@
+<div class="options">
+  <div class="w-100" [style.maxWidth]="'243px'">
+    <app-avatar-actions>
+      <app-avatar [url]="'../assets/images/tmp-img-gudel.png'" maxWidth="243px"></app-avatar>
+    </app-avatar-actions>
+  </div>
+  <div class="options-form">
+    <app-form-fields [formFields]="formFields" [formGroup]="formGroup"> </app-form-fields>
+    <div class="w-100 text-center">
+      <button
+        class="form-submit-btn"
+        [disabled]="!formGroup.valid"
+        [class.disabled]="!formGroup.valid"
+        (click)="submit()"
+      >
+        Save changes
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-plot [data]="testdata" [title]="'Testplot'"></app-plot>

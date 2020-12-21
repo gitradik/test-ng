@@ -1,0 +1,45 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+  <button class="open-edit-options-dialog">
+    <img src="../assets/images/pencil.svg" />
+  </button>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+    <img src="../assets/images/cross.svg" alt="close" />
+  </button>
+</div>
+<div class="modal-body">
+  <app-avatar [url]="'../../assets/images/tmp-img-gudel.png'" width="243px"></app-avatar>
+  <div class="options">
+    <div class="option">
+      <div class="option-name">Facility name</div>
+      <div class="option-value">{{ data?.facilityName }}</div>
+    </div>
+    <div class="option">
+      <div class="option-name">Description</div>
+      <div class="option-value">{{ data?.description }}</div>
+    </div>
+    <div class="option">
+      <div class="option-name">Güdel-ID</div>
+      <div class="option-value">{{ data?.gudelId }}</div>
+    </div>
+    <div class="option">
+      <div class="option-name">Equipment number</div>
+      <div class="option-value">{{ data?.equipmentNumber }}</div>
+    </div>
+    <div class="option">
+      <div class="option-name">Condition monitoring serial number</div>
+      <div class="option-value">{{ data?.conditionMonitoringSerialNumber }}</div>
+    </div>
+    <div class="option">
+      <div class="option-name">Location</div>
+      <div class="option-value">{{ data?.location }}</div>
+    </div>
+    <div class="option">
+      <div class="option-name">Color</div>
+      <div class="option-value value-color" *ngIf="data?.color" [style.color]="data.color">
+        <div class="dot" [style.backgroundColor]="data.color"></div>
+        {{ data.color }}
+      </div>
+    </div>
+  </div>
+</div>

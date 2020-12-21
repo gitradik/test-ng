@@ -1,0 +1,20 @@
+<div class="date-picker">
+  <div class="form-group mb-0">
+    <div class="input-group">
+      <input
+        class="form-control"
+        [placeholder]="placeholder || 'Choose date'"
+        [(ngModel)]="ngModel"
+        (ngModelChange)="ngModelChange.emit(ngModel)"
+        name="d"
+        ngbDatepicker
+        #datepicker="ngbDatepicker"
+      />
+      <div class="input-group-append">
+        <button class="btn-calendar" (click)="datepicker.toggle()" type="button">
+          <img src="../../../../assets/images/date-picker.svg" alt="date-picker" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

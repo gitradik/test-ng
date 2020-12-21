@@ -1,0 +1,26 @@
+@import 'variables';
+
+.options-header-menu {
+  cursor: pointer;
+  display: flex;
+
+  .options-name {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $color-tuna;
+    padding: 0 10px 0 16px;
+
+    span {
+      margin-bottom: -1px;
+    }
+
+    .dot {
+      background-color: $color-tuna;
+      height: 12px;
+      width: 12px;
+      margin-right: 10px;
+    }
+  }
+}

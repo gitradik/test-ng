@@ -1,0 +1,12 @@
+@import 'variables';
+
+.authorization {
+  min-height: 100vh;
+  background-color: $color-white-smoke;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}

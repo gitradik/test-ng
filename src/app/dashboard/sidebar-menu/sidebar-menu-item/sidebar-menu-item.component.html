@@ -1,0 +1,16 @@
+<div class="mb-2">
+  <a
+    *ngIf="menuItem"
+    class="sidebar-menu-item"
+    [routerLink]="menuItem?.link"
+    routerLinkActive="active"
+  >
+    <img class="icon" [src]="'../assets/images/' + menuItem?.icon" [alt]="menuItem?.label" />
+    <img
+      class="activeIcon"
+      [src]="'../assets/images/' + menuItem?.activeIcon"
+      [alt]="menuItem?.label"
+    />
+    <div class="menu-label">{{ menuItem?.label }}</div>
+  </a>
+</div>

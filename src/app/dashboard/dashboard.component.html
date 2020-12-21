@@ -1,0 +1,18 @@
+<app-sidebar-menu></app-sidebar-menu>
+<app-header-toolbar>
+  <div class="mr-3">
+    <app-options-header-menu></app-options-header-menu>
+  </div>
+  <app-user-header-menu></app-user-header-menu>
+</app-header-toolbar>
+
+<div class="dashboard">
+  <div class="dashboard-container">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>
+
+<ngb-alert type="info" *ngIf="alert" (close)="alertClose()" [style.backgroundColor]="alert.color">
+  <img [src]="'../assets/images/' + alert.icon" [alt]="alert.icon" />
+  <h4>{{ alert.message }}</h4>
+</ngb-alert>

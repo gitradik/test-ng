@@ -1,0 +1,7 @@
+<div class="options-header-menu" (click)="openViewDialog()">
+  <div class="options-name" [style.color]="options?.color">
+    <div class="dot" [style.backgroundColor]="options?.color"></div>
+    <span>{{ options?.facilityName || 'name #1' }}</span>
+  </div>
+  <app-avatar [url]="'../../assets/images/tmp-img-gudel.png'" maxWidth="35px"></app-avatar>
+</div>

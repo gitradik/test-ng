@@ -1,0 +1,72 @@
+@import 'variables';
+
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range,
+.custom-day:hover {
+  background-color: $color-red;
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba($color-red, 0.5);
+}
+
+.range-date-time-picker {
+  ngb-datepicker {
+    border: 0;
+  }
+
+  .range-time-pickers {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.25rem 0.25rem 0.25rem;
+  }
+
+  .btn-toggle {
+    position: relative;
+    font-size: 12px;
+    padding: 0.75em 15px;
+    color: $color-tuna;
+    border: 1px solid $color-gray;
+    border-radius: 0;
+    background-color: $color-white;
+    padding-right: 55px;
+    width: 175px;
+
+    .btn-toggle-icon {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      right: 0;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      border: 1px solid $color-tuna;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .range-date-time-picker-togglers {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+  }
+}

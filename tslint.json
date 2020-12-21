@@ -1,0 +1,5 @@
+{
+  "extends": "@elunic/ecs/tslint/tslint.json",
+  "rules": {
+  }
+}

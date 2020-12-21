@@ -1,0 +1,39 @@
+@import 'variables';
+
+.table {
+  margin-bottom: 35px;
+  font-size: 12px;
+  background-color: $color-white;
+  box-shadow: $bs-default;
+  position: relative;
+  border-collapse: collapse;
+
+  tr {
+    background-color: $color-white-smoke;
+    border: 0;
+
+    &:nth-of-type(odd) {
+      background-color: $color-white !important;
+    }
+  }
+
+  th {
+    background-color: $color-red;
+    color: $color-white;
+    padding: 20px 30px;
+    position: sticky;
+    top: -35px;
+  }
+
+  td {
+    padding: 20px 30px;
+    border: 0;
+  }
+
+  tfoot {
+    td {
+      padding: 0;
+      background-color: $color-white;
+    }
+  }
+}

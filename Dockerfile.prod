@@ -1,0 +1,3 @@
+FROM httpd:alpine
+COPY ./dist/gudel-cmm-frontend/* /usr/local/apache2/htdocs/
+COPY ./server/* /usr/local/apache2/htdocs/

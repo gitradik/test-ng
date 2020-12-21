@@ -1,0 +1,7 @@
+<div class="sidebar-menu">
+  <ng-container *ngFor="let item of menus; let i = index">
+    <div [ngClass]="{ 'mt-auto': i === menus.length - 1 }">
+      <app-sidebar-menu-item [menuItem]="item"></app-sidebar-menu-item>
+    </div>
+  </ng-container>
+</div>

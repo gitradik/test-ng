@@ -1,0 +1,60 @@
+@import 'variables';
+
+.date-picker {
+  width: 175px;
+
+  .form-inline {
+    display: inline-block;
+  }
+
+  .input-group {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    padding: 18px 15px;
+    color: $color-tuna;
+    border: 1px solid $color-gray;
+    background-color: $color-white;
+  }
+
+  .input-group-append {
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-calendar {
+    background-color: $color-white;
+    padding: 6px 10px;
+    border: 1px solid $color-tuna;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+.custom-select {
+  border-radius: 0;
+}
+
+.chevron {
+  color: $color-red;
+}
+
+.form-control {
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

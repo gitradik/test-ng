@@ -1,0 +1,20 @@
+<div class="d-flex align-items-start justify-content-between">
+  <app-form-fields [formFields]="formFields" [formGroup]="formGroup" [row]="true">
+  </app-form-fields>
+  <button class="btn" (click)="openExportDataDialog()">
+    <img src="../../../assets/images/group.svg" alt="group" />
+  </button>
+</div>
+
+<div class="graph">
+  <div class="d-flex justify-content-between">
+    <label>
+      <div class="dot"></div>
+      {{ formGroup.get(valueFormField.name)?.value }}
+    </label>
+    <app-form-fields [formFields]="[valueFormField]" [formGroup]="formGroup" [row]="true">
+    </app-form-fields>
+  </div>
+
+  <app-plot></app-plot>
+</div>

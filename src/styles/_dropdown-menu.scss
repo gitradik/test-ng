@@ -1,0 +1,57 @@
+@import 'variables';
+
+.dropdown {
+  &.show {
+    .btn {
+      transition: 0.2s;
+      color: $color-aluminium;
+
+      &:after {
+        transition: 0.2s;
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    outline: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    color: $color-tuna;
+
+    &:after {
+      color: $color-tuna;
+      margin-left: 10px;
+      transition: 0.2s;
+      transform: rotateZ(0);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .dropdown-menu {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: $bs-default;
+    max-height: 425px;
+    overflow-y: auto;
+  }
+
+  .dropdown-item {
+    transition: 0.2s;
+    color: $color-tuna;
+    font-size: 12px;
+
+    &:hover {
+      transition: 0.2s;
+      color: $color-white;
+      background-color: $color-red;
+    }
+  }
+}
